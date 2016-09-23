@@ -78,6 +78,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="bddesenvDataSet.cs">
+      <DependentUpon>bddesenvDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="bddesenvDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
