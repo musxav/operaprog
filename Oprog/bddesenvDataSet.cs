@@ -4,5 +4,8 @@
 
     partial class bddesenvDataSet
     {
+        partial class arbreDataTable
+        {
+        }
     }
 }
