@@ -24,5 +24,16 @@ namespace Oprog
         {
             InitializeComponent();
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+
+            Oprog.bddesenvDataSet bddesenvDataSet = ((Oprog.bddesenvDataSet)(this.FindResource("bddesenvDataSet")));
+            // Cargar datos en la tabla usuaris. Puede modificar este código según sea necesario.
+            Oprog.bddesenvDataSetTableAdapters.usuarisTableAdapter bddesenvDataSetusuarisTableAdapter = new Oprog.bddesenvDataSetTableAdapters.usuarisTableAdapter();
+            bddesenvDataSetusuarisTableAdapter.Fill(bddesenvDataSet.usuaris);
+            System.Windows.Data.CollectionViewSource usuarisViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("usuarisViewSource")));
+            usuarisViewSource.View.MoveCurrentToFirst();
+        }
     }
 }
